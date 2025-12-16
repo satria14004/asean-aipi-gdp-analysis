@@ -2,12 +2,12 @@
 
 ## Overview
 This project analyzes the relationship between the IMF AI Preparedness Index (AIPI) 
-and GDP per capita across 10 ASEAN countries (2020-2023). Using Ordinary Least Squares (OLS) regression analysis to quantify how AI preparedness correlates with economic productivity (GDP).
+and GDP per capita across 10 ASEAN countries (2023). Using Ordinary Least Squares (OLS) regression analysis to quantify how AI preparedness correlates with economic productivity (GDP).
 
 ## Quick Start
 ```bash
 # Clone repository
-git clone https://github.com/YOUR-USERNAME/aipi-gdp-analysis.git
+git clone https://github.com/satria14004/aipi-gdp-analysis.git
 cd aipi-gdp-analysis
 
 # Install dependencies
