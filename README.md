@@ -23,9 +23,9 @@ python src/analysis.py
 - Interaction effects suggest differential impacts by AI preparedness level
 
 ## Data Sources
-- **AI Preparedness Index**: IMF DataMapper API
+- **AI Preparedness Index**: IMF DataMapper API [AI-PI indicator] 
 - **GDP per Capita**: IMF DataMapper API (NGDPDPC indicator)
-- **Time Period**: 2020-2023
+- **Time Period**: 2023
 - **Countries**: Indonesia, Singapore, Malaysia, Thailand, Vietnam, Philippines, 
   Cambodia, Laos, Myanmar, Brunei
 
