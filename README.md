@@ -20,7 +20,6 @@ python src/analysis.py
 ## Key Findings
 - Countries with higher AIPI scores demonstrate significantly higher GDP per capita
 - The relationship shows a statistically significant positive correlation
-- [Add your actual regression coefficient and p-value]
 - Interaction effects suggest differential impacts by AI preparedness level
 
 ## Data Sources
