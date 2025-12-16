@@ -1,0 +1,155 @@
+================================================================================
+AI PREPAREDNESS INDEX (AIPI) AND GDP ANALYSIS - ASEAN REGION
+================================================================================
+Analysis Generated: 2025-12-16 12:44:06
+================================================================================
+
+SUMMARY STATISTICS (2023)
+--------------------------------------------------------------------------------
+    Country  AIPI Score  GDP per Capita (USD)  Log GDP per Capita
+  Singapore    0.800567             85412.252           11.355245
+     Brunei    0.495253             33507.412           10.419522
+   Malaysia    0.632026             12097.990            9.400795
+   Thailand    0.535717              7350.890            8.902577
+  Indonesia    0.516303              4919.943            8.501052
+    Vietnam    0.481869              4316.740            8.370256
+Philippines    0.498486              3905.419            8.270120
+   Cambodia    0.369965              2492.644            7.821099
+       Laos    0.330492              1979.790            7.590746
+    Myanmar    0.327473              1139.912            7.038706
+
+DESCRIPTIVE STATISTICS
+--------------------------------------------------------------------------------
+Number of Countries: 10
+Number of Years: 1
+Total Observations: 10
+
+AIPI Statistics (All Years):
+count    10.000000
+mean      0.498815
+std       0.143395
+min       0.327473
+25%       0.397941
+50%       0.496869
+75%       0.530864
+max       0.800567
+
+GDP per Capita Statistics (All Years, USD):
+count       10.000000
+mean     15712.299200
+std      26287.211842
+min       1139.912000
+25%       2845.837750
+50%       4618.341500
+75%      10911.215000
+max      85412.252000
+
+Log GDP per Capita Statistics:
+count    10.000000
+mean      8.767012
+std       1.316149
+min       7.038706
+25%       7.933355
+50%       8.435654
+75%       9.276240
+max      11.355245
+
+================================================================================
+BASELINE OLS REGRESSION RESULTS
+================================================================================
+Model: log(GDP per capita) ~ AIPI
+Dependent Variable: Log GDP per capita
+--------------------------------------------------------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             log_gdp_pc   R-squared:                       0.762
+Model:                            OLS   Adj. R-squared:                  0.732
+Method:                 Least Squares   F-statistic:                     25.62
+Date:                Tue, 16 Dec 2025   Prob (F-statistic):           0.000975
+Time:                        12:44:06   Log-Likelihood:                -9.2309
+No. Observations:                  10   AIC:                             22.46
+Df Residuals:                       8   BIC:                             23.07
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          4.7703      0.818      5.829      0.000       2.883       6.658
+aipi           8.0125      1.583      5.062      0.001       4.362      11.663
+==============================================================================
+Omnibus:                       17.667   Durbin-Watson:                   1.917
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):                9.921
+Skew:                           1.959   Prob(JB):                      0.00701
+Kurtosis:                       5.909   Cond. No.                         9.21
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+KEY FINDINGS FROM BASELINE MODEL:
+--------------------------------------------------------------------------------
+Intercept: 4.7703
+AIPI Coefficient: 8.0125
+AIPI P-value: 0.000975
+R-squared: 0.7621
+Adjusted R-squared: 0.7323
+
+Interpretation: A 1-unit increase in AIPI is associated with a 801.25% increase in GDP per capita.
+Statistical Significance: YES (p-value = 0.000975 < 0.05)
+
+
+================================================================================
+INTERACTION MODEL RESULTS
+================================================================================
+Model: log(GDP) ~ AIPI + low_aipi + (AIPI × low_aipi)
+Tests differential effects by AIPI level
+--------------------------------------------------------------------------------
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             log_gdp_pc   R-squared:                       0.872
+Model:                            OLS   Adj. R-squared:                  0.809
+Method:                 Least Squares   F-statistic:                     13.67
+Date:                Tue, 16 Dec 2025   Prob (F-statistic):            0.00432
+Time:                        12:44:06   Log-Likelihood:                -6.1154
+No. Observations:                  10   AIC:                             20.23
+Df Residuals:                       6   BIC:                             21.44
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+const                    3.4551      1.397      2.474      0.048       0.038       6.872
+aipi                     9.7731      2.301      4.248      0.005       4.144      15.403
+low_aipi                -0.6469      2.002     -0.323      0.758      -5.546       4.252
+aipi_low_interaction     3.7923      4.205      0.902      0.402      -6.497      14.081
+==============================================================================
+Omnibus:                        3.031   Durbin-Watson:                   1.309
+Prob(Omnibus):                  0.220   Jarque-Bera (JB):                0.441
+Skew:                          -0.224   Prob(JB):                        0.802
+Kurtosis:                       3.926   Cond. No.                         34.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+================================================================================
+CORRELATION ANALYSIS
+================================================================================
+Pearson Correlation (AIPI vs Log GDP): 0.8730
+
+
+================================================================================
+DATA QUALITY & NOTES
+================================================================================
+Countries Included: Singapore, Brunei, Indonesia, Malaysia, Philippines, Thailand, Cambodia, Laos, Myanmar, Vietnam
+Time Period: 2023-2023
+Data Source: IMF DataMapper API
+AIPI Indicator: AI_PI
+GDP Indicator: NGDPDPC (GDP per capita, current prices USD)
+
+
+================================================================================
+For detailed interpretation and context, see FINDINGS.md
+================================================================================

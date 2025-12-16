@@ -1,0 +1,21 @@
+# Data files
+data/raw/*
+data/processed/*
+!data/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Outputs
+results/*.png
+results/*.csv
+.DS_Store
